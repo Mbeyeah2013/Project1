@@ -32,7 +32,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record? Spikes in system resource use
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name      | Function    | IP Address | Operating System |
 |-----------|-------------|------------|------------------|
@@ -45,19 +44,22 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- From my public IP: 73.37.198.57
+
+Machines within the network can only be accessed by JumpBox.
+- Which machine did you allow to access your ELK VM? The JumpBox
+- What was its IP address? 10.0.0.4 / 52.167.2.25
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name      | Publically Accessible | IP Addresses             |
+|-----------|-----------------------|--------------------------|
+| JumpBox   | Yes                   | 10.0.0.4 / 52.167.2.25   |
+| Web 1     | No                    | 10.0.0.5                 |
+| Web 2     | No                    | 10.0.0.6                 |
+| Elkserver | Yes                   | 10.1.0.4 / 40.125.72.159 |
 
 ### Elk Configuration
 
